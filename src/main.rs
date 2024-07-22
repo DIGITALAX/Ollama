@@ -20,7 +20,7 @@ use tokio;
 async fn main() -> std::io::Result<()> {
     dotenv().ok();
 
-    let render_clave = std::env::var("RENDER_KEY").expect("Sin Clave");
+    let render_clave = std::env::var("OLLAMA_KEY").expect("Sin Clave");
     let ollama_path = Path::new("ollama");
     let model_dir = dirs::home_dir().unwrap().join(".ollama/models");
 
